@@ -2,20 +2,20 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://evolyten.github.io/goit-js-hw-081",
+  "homepage": "https://evolyten.github.io/goit-js-hw-08",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-081/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Evolyten/goit-js-hw-081.git"
+    "url": "git+https://github.com/Evolyten/goit-js-hw-08.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Evolyten/goit-js-hw-081.git/issues"
+    "url": "https://github.com/Evolyten/goit-js-hw-08.git/issues"
   },
   "dependencies": {
     "@vimeo/player": "^2.17.1",
