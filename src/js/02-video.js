@@ -13,12 +13,12 @@ localStorage.setItem(LOCALSTORAGE_KEY,JSON.stringify(e['seconds']))
     }
    
 player.on("timeupdate", throttle(onPlay,1000))
-let curentTime = localStorage.getItem(LOCALSTORAGE_KEY)
+let currentTime = localStorage.getItem(LOCALSTORAGE_KEY)
 
 console.log(localStorage.getItem(LOCALSTORAGE_KEY))
-if (curentTime)
+if (currentTime)
 {
-    player.setCurrentTime(curentTime).then(function (seconds) {
+player.setCurrentTime(currentTime).then(function (seconds) {
 }).catch(function(error) {
     switch (error.name) {
         case 'RangeError':
