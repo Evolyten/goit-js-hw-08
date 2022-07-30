@@ -7,7 +7,7 @@ const refs = {
 const FEEDBACK_DATA= "feedback-form-state"
 
 refs.form.addEventListener("input", throttle(currentActive, 500))
-refs.form.addEventListener("click",onCLick)
+refs.form.addEventListener("submit",onCLick)
 let data = {}
 
 if (dataFromLocalStorage()) {
@@ -24,13 +24,16 @@ function currentActive(e) {
 
 function onCLick(e) {
     e.preventDefault();
-    if (e.target.nodeName !== "BUTTON") {
-        return
-    }
+   if(refs.form.message.value&&refs.form.email.value)
+    {
     console.log(dataFromLocalStorage())
     refs.form.message.value = ""
     refs.form.email.value = ""
-    localStorage.clear()
+        localStorage.clear()
+   } else {
+       alert("Please fill all fields")
+    }
+    
 }
 
 textContent();
@@ -49,3 +52,5 @@ function textContent() {
 function dataFromLocalStorage() {
     return JSON.parse(localStorage.getItem(FEEDBACK_DATA))
 }
+
+
