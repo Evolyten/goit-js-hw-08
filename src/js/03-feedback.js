@@ -8,10 +8,12 @@ const FEEDBACK_DATA= "feedback-form-state"
 
 refs.form.addEventListener("input", throttle(currentActive, 500))
 refs.form.addEventListener("click",onCLick)
-
 let data = {}
 
-textContent();
+if (dataFromLocalStorage()) {
+    data={...dataFromLocalStorage()}
+}
+
 
 function currentActive(e) {
     if (e.target.value) {
@@ -31,6 +33,7 @@ function onCLick(e) {
     localStorage.clear()
 }
 
+textContent();
 
 
 
