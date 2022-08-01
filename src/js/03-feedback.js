@@ -45,7 +45,6 @@ function textContent() {
         let dataInStorage = dataFromLocalStorage()
         refs.form.message.value = (dataInStorage.message) ? dataInStorage.message:""
         refs.form.email.value = (dataInStorage.email) ? dataInStorage.email : ""
-        console.log(dataInStorage)
     // }
     
 }
