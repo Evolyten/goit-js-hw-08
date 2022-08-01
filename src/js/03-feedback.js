@@ -26,10 +26,10 @@ function onCLick(e) {
     e.preventDefault();
    if(refs.form.message.value&&refs.form.email.value)
     {
-    console.log(dataFromLocalStorage())
-    refs.form.message.value = ""
-    refs.form.email.value = ""
-        localStorage.clear()
+       console.log(dataFromLocalStorage())
+       refs.form.reset()
+       localStorage.clear()
+       data={}
    } else {
        alert("Please fill all fields")
     }
@@ -41,11 +41,12 @@ textContent();
 
 
 function textContent() {
-    if (localStorage.getItem(FEEDBACK_DATA)) {
+    // if (localStorage.getItem(FEEDBACK_DATA)) {
         let dataInStorage = dataFromLocalStorage()
-        refs.form.message.value = dataInStorage.message
-        refs.form.email.value = dataInStorage.email
-    }
+        refs.form.message.value = (dataInStorage.message) ? dataInStorage.message:""
+        refs.form.email.value = (dataInStorage.email) ? dataInStorage.email : ""
+        console.log(dataInStorage)
+    // }
     
 }
 
